@@ -5,7 +5,7 @@ type ResponseData = {
 }
 
 export const fetchCache = 'force-no-store';
-export const revalidate = true;
+export const revalidate = 0;
 
 export async function GET(req: Request) {
   const openai = new OpenAI({
