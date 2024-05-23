@@ -12,7 +12,7 @@ export default function ResultLayout({
       fetch(`https://next-kazanie.vercel.app/api/openai`, { cache: 'no-store' })
         .then((res) => res.json())
         .then((data) => {
-          setContent(data);
+          setContent(data.message);
         });
 
       return () => {
