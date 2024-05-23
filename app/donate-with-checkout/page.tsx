@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 
 import CheckoutForm from "@/components/CheckoutForm";
 
+export const fetchCache = 'force-no-store';
+
 export const metadata: Metadata = {
   title: "Donate with hosted Checkout | Next.js + TypeScript Example",
 };

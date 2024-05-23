@@ -1,6 +1,8 @@
 "use client";
 import React, {useEffect, useState} from 'react';
 
+export const fetchCache = 'force-no-store';
+
 export default function ResultLayout({
   children,
 }: {

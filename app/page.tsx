@@ -3,6 +3,8 @@ import React from 'react';
 import Link from 'next/link';
 import CheckoutForm from '@/components/CheckoutForm';
 
+export const fetchCache = 'force-no-store';
+
 export default function IndexPage(): JSX.Element {
   return (
     <div className="page-container">
