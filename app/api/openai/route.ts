@@ -17,7 +17,9 @@ export async function GET(req: Request) {
     return new Response(chatCompletion.choices[0].message.content, {
       status: 200,
         headers: {
-            'Content-Type': 'application/json'
+            'Cache-Control': 'public, s-maxage=1',
+      'CDN-Cache-Control': 'public, s-maxage=1',
+      'Vercel-CDN-Cache-Control': 'public, s-maxage=1',
         }
     });
 }
