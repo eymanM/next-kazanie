@@ -13,7 +13,7 @@ export async function GET(req: Request) {
   });
     console.log('generowanie rozpoczete')
     const chatCompletion = await openai.chat.completions.create({
-    messages: [{ role: 'user', content: 'W pierwszej wiadomości wygeneruj mi bardzo krótkie kazanie (homilię)' }],
+    messages: [{ role: 'user', content: 'W pierwszej wiadomości wygeneruj mi krótkie kazanie (homilię)' }],
     model: 'gpt-4o',
   })
 
