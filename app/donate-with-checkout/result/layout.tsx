@@ -9,7 +9,7 @@ export default function ResultLayout({
     const [content, setContent] = useState<string>('');
     const randomNumber = Math.floor(Math.random() * 100000);
     useEffect(() => {
-      fetch(`https://next-kazanie-git-main-eymanms-projects.vercel.app/api/openai`, { cache: 'no-store' })
+      fetch(`https://next-kazanie.vercel.app/api/openai`, { cache: 'no-store' })
         .then((res) => res.json())
         .then((data) => {
           setContent(data.message);
