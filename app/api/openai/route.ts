@@ -14,5 +14,10 @@ export async function GET(req: Request) {
     model: 'gpt-4o',
   })
 
-    return NextResponse.json({ message: chatCompletion.choices[0].message.content as string});
+    return new Response(chatCompletion.choices[0].message.content, {
+      status: 200,
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    });
 }
