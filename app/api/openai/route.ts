@@ -10,9 +10,16 @@ export async function GET(req: Request) {
   });
     console.log('generowanie rozpoczete')
     const chatCompletion = await openai.chat.completions.create({
-    messages: [{ role: 'user', content: 'W pierwszej wiadomości wygeneruj mi krótkie kazanie (homilię)' }],
+    messages: [{ role: 'user', content: 'W pierwszej wiadomości wygeneruj mi bardzo krótkie kazanie (homilię)' }],
     model: 'gpt-4o',
   })
 
-    return NextResponse.json({ message: chatCompletion.choices[0].message.content as string});
+    return new Response(chatCompletion.choices[0].message.content, {
+      status: 200,
+        headers: {
+            'Cache-Control': 'public, s-maxage=1',
+             'CDN-Cache-Control': 'public, s-maxage=1',
+            'Vercel-CDN-Cache-Control': 'public, s-maxage=1',
+        }
+    });
 }
