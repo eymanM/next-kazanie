@@ -8,7 +8,7 @@ export default function ResultLayout({
 }): JSX.Element {
     const [content, setContent] = useState<string>('');
     useEffect(() => {
-      fetch('http://localhost:3000/api/openai')
+      fetch('https://next-kazanie-git-main-eymanms-projects.vercel.app/api/openai')
         .then((res) => res.json())
         .then((data) => {
           setContent(data.message);

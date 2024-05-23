@@ -6,8 +6,7 @@ import CheckoutForm from '@/components/CheckoutForm';
 export default function IndexPage(): JSX.Element {
   return (
     <div className="page-container">
-      <h1>Donate with hosted Checkout</h1>
-      <p>Donate to our project 💖</p>
+      <h1>Ofiara za wygenerowanie kazania</h1>
       <CheckoutForm uiMode="hosted" />
     </div>
   );
