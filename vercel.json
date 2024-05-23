@@ -1,7 +1,7 @@
 {
   "headers": [
     {
-      "source": "/about.js",
+      "source": "/api/openai/route.ts",
       "headers": [
         {
           "key": "Cache-Control",
@@ -11,7 +11,7 @@
     }
   ],
     "functions": {
-      "api/openai/route.ts": {
+      "/api/openai/route.ts": {
         "maxDuration": 25
     }
   }
