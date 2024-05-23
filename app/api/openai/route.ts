@@ -4,6 +4,8 @@ type ResponseData = {
   message: string
 }
 
+export const fetchCache = 'force-no-store';
+
 export async function GET(req: Request) {
   const openai = new OpenAI({
     apiKey: process.env.OPENAI_API_KEY
@@ -14,12 +16,5 @@ export async function GET(req: Request) {
     model: 'gpt-4o',
   })
 
-    return new Response(chatCompletion.choices[0].message.content, {
-      status: 200,
-        headers: {
-            'Cache-Control': 'public, s-maxage=1',
-      'CDN-Cache-Control': 'public, s-maxage=1',
-      'Vercel-CDN-Cache-Control': 'public, s-maxage=1',
-        }
-    });
+    return NextResponse.json({ message: chatCompletion.choices[0].message.content as string});
 }

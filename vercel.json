@@ -1,15 +1,4 @@
 {
-  "headers": [
-    {
-      "source": "app/api/openai/route.ts",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "s-maxage=1, stale-while-revalidate=1"
-        }
-      ]
-    }
-  ],
     "functions": {
       "app/api/openai/route.ts": {
         "maxDuration": 25
